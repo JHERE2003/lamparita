@@ -1,0 +1,96 @@
+/* Estilo base */
+body {
+  background: radial-gradient(circle, #1b2735 0%, #090a0f 100%);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Contenedor de la lámpara */
+.lamp-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Lámpara */
+.lamp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Bombilla */
+.bulb {
+  width: 100px;
+  height: 100px;
+  background-color: #555;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 0px 0px yellow;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Carita */
+.face {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eye {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.mouth {
+  width: 30px;
+  height: 15px;
+  border: 2px solid black;
+  border-top: none;
+  border-radius: 0 0 15px 15px;
+  margin-top: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Base de la lámpara */
+.stand {
+  width: 20px;
+  height: 100px;
+  background-color: #333;
+  margin-top: -10px;
+}
+
+/* Cuerda */
+.rope {
+  width: 4px;
+  height: 80px;
+  background-color: #aaa;
+  position: absolute;
+  top: 100px;
+  animation: swing 0.5s ease;
+  transform-origin: top center;
+  cursor: pointer;
+}
+
+/* Animación de la cuerda */
+@keyframes swing {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
